@@ -42,3 +42,5 @@
 <%= link_to t('.new', :default => t("helpers.links.new")),
             new_friend_path,
             :class => 'btn btn-primary' %>
+
+<%= will_paginate @friends %>

@@ -4,7 +4,7 @@ class FriendsController < ApplicationController
   # GET /friends
   # GET /friends.json
   def index
-    @friends = Friend.all
+    @friends = Friend.all.paginate(:page => params[:page], :per_page => 10)
   end
 
   # GET /friends/1
